@@ -1,0 +1,28 @@
+# Python virtual environment
+venv/
+env/
+ENV/
+.venv/
+.env/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Ansible specific
+*.retry
+
+# Editor specific files
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+*~
+.*.swp
+.DS_Store

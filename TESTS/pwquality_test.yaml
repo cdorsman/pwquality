@@ -1,0 +1,16 @@
+---
+- name: Test pwquality module
+  hosts: localhost
+  connection: local
+  gather_facts: no
+  become: yes  # Needed to modify /etc/security/pwquality.conf
+  tasks:
+    - name: Set minimum password length
+      pwquality:
+        minlen: 12
+        backup: yes
+      register: pwquality_result
+      
+    - name: Display pwquality result
+      debug:
+        var: pwquality_result

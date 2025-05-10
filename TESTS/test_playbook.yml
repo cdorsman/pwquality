@@ -1,0 +1,23 @@
+---
+- name: Test pwquality module
+  hosts: localhost
+  connection: local
+  gather_facts: no
+  tasks:
+    - name: Run my_test module with 'test' action
+      my_test:
+        action: test
+      register: test_result
+
+    - name: Display test result
+      debug:
+        var: test_result
+
+    - name: Run my_test module with 'check' action
+      my_test:
+        action: check
+      register: check_result
+
+    - name: Display check result
+      debug:
+        var: check_result
